@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+Chef::Log.info("Newrelic: Node Platform, #{node[:platform]}")
+
 case node[:platform]
 when "ubuntu", "debian"
   include_recipe "newrelic::debian"
